@@ -1,16 +1,15 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
-from apps import home, heatmap, upload  # import your app modules here
+from apps import home, avianflu  # import your app modules here
 
-st.set_page_config(page_title="Streamlit Geospatial", layout="wide")
+st.set_page_config(page_title="DA-RFO V (Bicol) Geospatial App", layout="wide")
 
 # A dictionary of apps in the format of {"App title": "App icon"}
 # More icons can be found here: https://icons.getbootstrap.com
 
 apps = {
     "home": {"title": "Home", "icon": "house"},
-    "heatmap": {"title": "Heatmap", "icon": "map"},
-    "upload": {"title": "Upload", "icon": "cloud-upload"},
+    "avianflu": {"title": "Avian Influenza Updates", "icon": "map"}
 }
 
 titles = [app["title"] for app in apps.values()]
