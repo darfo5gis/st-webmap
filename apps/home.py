@@ -19,5 +19,6 @@ def app():
     m.add_basemap("HYBRID")
     m.add_basemap("ROADMAP")
     # m.whiteboxgui(tree=TRUE)  //cant't add whiteboxgui to leafmap.leafmap
+    m.save_draw_features("data.geojson")
     m.to_streamlit(height=700)
 
