@@ -24,7 +24,7 @@ else:
 
 with st.sidebar:
     selected = option_menu(
-        "DA-RFO5 webmaps",
+        "Department of Agriculture Regional Field Office 5 Webmaps",
         options=titles,
         icons=icons,
         menu_icon="building",
