@@ -1,5 +1,5 @@
 import streamlit as st
-import leafmap.deck as leafmap
+import leafmap.heremap as leafmap
 
 
 def app():
