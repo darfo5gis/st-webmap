@@ -24,10 +24,10 @@ else:
 
 with st.sidebar:
     selected = option_menu(
-        "Main Menu",
+        "DA-RFO5 webmaps",
         options=titles,
         icons=icons,
-        menu_icon="cast",
+        menu_icon="building",
         default_index=default_index,
     )
 
