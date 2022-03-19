@@ -14,7 +14,7 @@ def app():
     """
     )
 
-    m = leafmap.Map(center=[13.30, 124.15], zoom=8)
+    m = leafmap.Map(center=[13.417190312820402, 123.3315990573133], zoom=8)
     m.add_basemap("ROADMAP")
     m.add_basemap("HYBRID")
     m.to_streamlit(height=700)
