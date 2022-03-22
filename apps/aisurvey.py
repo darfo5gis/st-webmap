@@ -22,7 +22,7 @@ def app():
     )
 
     base_url = (
-        'https://da5odk.site/v1/projects/5/forms/1/submissions'
+        'https://da5odk.site/v1/projects/5/forms/1/submissions.csv.zip'
     )
 
     auth = {
