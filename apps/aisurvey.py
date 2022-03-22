@@ -22,19 +22,25 @@ def app():
     )
 
     base_url = (
-        'https://da5odk.site/v1/projects/'
+        'https://da5odk.site/v1/projects/5/forms/1/submissions'
     )
 
-    projectId = 
+    auth = {
+    "email": "darfo5.gis@gmail.com",
+    "password": "Bicol.DB'5"
+    }
 
-    URL = base_url + projectId + '/forms/' + xmlFormId + '/submissions.csv'
+    data = requests.post(base_url, auth=auth)
 
 
     gdf = gpd.read_file(municities)
     gdf1 = gpd.read_file(ai)
     gdf2 = gpd.read_file(bp2_benes)
+    gdf_data = gpd.read_file(data)
+
     m.add_gdf(gdf, layer_name='Municities')
     m.add_gdf(gdf1, layer_name='AI case')
     m.add_gdf(gdf2, layer_name='BP2 Livelihood Assistance beneficiaries')
+    m.add_gdf(gdf_data, layer_name='ODK Data')
     m.load_config(config)
     m.to_streamlit(height=900, width=900, responsive=True, scrolling=True)
