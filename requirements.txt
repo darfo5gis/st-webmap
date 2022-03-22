@@ -9,4 +9,3 @@ nbserverproxy
 streamlit
 streamlit-option-menu
 requests
-zipfile
