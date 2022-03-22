@@ -2,6 +2,8 @@ import streamlit as st
 import leafmap.kepler as leafmap
 import requests
 import geopandas as gpd
+from zipfile import ZipFile
+from io import BytesIO
 
 def app():
     st.title("Avian Influenza Surveillance")
@@ -25,18 +27,13 @@ def app():
         'https://da5odk.site/v1/projects/5/forms/1/submissions.csv.zip'
     )
 
-    auth = {
-    "email": "darfo5.gis@gmail.com",
-    "password": "Bicol.DB'5"
-    }
-
-    data = requests.post(base_url, auth=auth)
-
+    data = requests.post(base_url, auth=HTTPBasicAuth('darfo5.gis@gmail.com', "Bicol.DB'5"))
+    csv = ZipFile(BytesIO(data.content))
 
     gdf = gpd.read_file(municities)
     gdf1 = gpd.read_file(ai)
     gdf2 = gpd.read_file(bp2_benes)
-    gdf_data = gpd.read_file(data)
+    gdf_data = gpd.read_file(csv)
 
     m.add_gdf(gdf, layer_name='Municities')
     m.add_gdf(gdf1, layer_name='AI case')
