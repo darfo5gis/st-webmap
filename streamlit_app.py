@@ -1,6 +1,6 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
-from apps import home, avianflu  # import your app modules here
+from apps import home, avianflu, aisurvey  # import your app modules here
 
 st.set_page_config(page_title="DA-RFO V (Bicol) Geospatial App", layout="wide")
 
