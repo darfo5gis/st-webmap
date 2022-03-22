@@ -9,8 +9,8 @@ st.set_page_config(page_title="DA-RFO V (Bicol) Geospatial App", layout="wide")
 
 apps = {
     "home": {"title": "Home", "icon": "house"},
-    "avianflu": {"title": "Avian Influenza Updates", "icon": "map"}
-    "aviansurvey": {"title": "Avian Influenza Surveillance", "icon": "map"}
+    "avianflu": {"title": "Avian Influenza Updates", "icon": "map"},
+    "aisurvey": {"title": "Avian Influenza Surveillance", "icon": "map"}
 }
 
 titles = [app["title"] for app in apps.values()]
