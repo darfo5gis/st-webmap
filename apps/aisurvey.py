@@ -27,7 +27,7 @@ def app():
         'https://da5odk.site/v1/projects/5/forms/1/submissions.csv.zip'
     )
 
-    data = requests.post(base_url, auth=HTTPBasicAuth('darfo5.gis@gmail.com', "Bicol.DB'5"))
+    data = requests.post(base_url, auth=('darfo5.gis@gmail.com', "Bicol.DB'5"))
     csv = ZipFile(BytesIO(data.content))
 
     gdf = gpd.read_file(municities)
